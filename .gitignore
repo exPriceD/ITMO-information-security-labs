@@ -1,0 +1,6 @@
+*.exe
+*.db
+*.db-shm
+*.db-wal
+lab13/evidence/
+__pycache__/
