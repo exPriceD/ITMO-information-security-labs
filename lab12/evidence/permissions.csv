@@ -1,0 +1,25 @@
+﻿permission,calculator,suspect,android14_protection
+android.permission.ACCESS_NETWORK_STATE,False,True,normal|instant
+android.permission.ACCESS_WIFI_STATE,False,True,normal
+android.permission.CALL_PHONE,False,True,dangerous
+android.permission.CHANGE_WIFI_STATE,False,True,normal
+android.permission.GET_TASKS,False,True,normal
+android.permission.INTERNET,False,True,normal|instant
+android.permission.KILL_BACKGROUND_PROCESSES,False,True,normal
+android.permission.MODIFY_AUDIO_SETTINGS,False,True,normal
+android.permission.MODIFY_PHONE_STATE,False,True,signature|privileged|role
+android.permission.READ_CONTACTS,False,True,dangerous
+android.permission.READ_LOGS,False,True,signature|privileged|development
+android.permission.READ_PHONE_STATE,False,True,dangerous
+android.permission.RECEIVE_BOOT_COMPLETED,False,True,normal
+android.permission.RECEIVE_SMS,False,True,dangerous
+android.permission.RESTART_PACKAGES,False,True,normal
+android.permission.SEND_SMS,False,True,dangerous
+android.permission.SYSTEM_ALERT_WINDOW,False,True,signature|setup|appop|installer|pre23|development
+android.permission.VIBRATE,False,True,normal|instant
+android.permission.WAKE_LOCK,False,True,normal|instant
+android.permission.WRITE_CONTACTS,False,True,dangerous
+android.permission.WRITE_EXTERNAL_STORAGE,False,True,dangerous
+com.android.launcher.permission.INSTALL_SHORTCUT,False,True,normal
+com.android.launcher.permission.UNINSTALL_SHORTCUT,False,True,normal
+org.fossify.android.permission.WRITE_GLOBAL_SETTINGS,True,False,custom/defined elsewhere

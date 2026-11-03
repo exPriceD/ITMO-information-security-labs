@@ -1,0 +1,25 @@
+{
+  "sample_sha256": "f62815bf74f5782056c0f5e2e5c410cd272707cc86f76ee499774e7a634095d4",
+  "md5": "264de68937b7ccd7db8eeaadc23f6433",
+  "package": "com.google.bps.bfcfc",
+  "label": "Google App Store",
+  "historical_ip_defanged": "107[.]183[.]16[.]189",
+  "url_defanged": "hxxp://107[.]183[.]16[.]189/kbs.php?m=Api&a=",
+  "download_path": "/Css/",
+  "payload_names": [
+    "google_n.css",
+    "google_s.css",
+    "google_h.css",
+    "google_w.css",
+    "google_k.css"
+  ],
+  "components": [
+    "CoreService",
+    "SMSReceiver",
+    "BootBroadcastReceiver",
+    "LockReceiver"
+  ],
+  "network_contacted": false,
+  "current_infrastructure_status": "not checked",
+  "non_c2_packer_domain": "www.apkprotect.net"
+}

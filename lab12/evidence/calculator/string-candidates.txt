@@ -1,0 +1,142 @@
+). Please report to Google or use https://goo.gle/compose-feedback
+.apk
+; accessibilityDataSensitive: 
+; importantForAccessibility: 
+ACCESSIBILITY_CLICKABLE_SPAN_ID
+ACTION_ACCESSIBILITY_FOCUS
+ACTION_CLEAR_ACCESSIBILITY_FOCUS
+AccessibilityAction(label=
+AccessibilityActionCompat: 
+AccessibilityClassName
+AccessibilityDelegate
+AccessibilityKey: 
+AccessibilityNodeInfo.roleDescription
+Callbacks must not add ACTION_ACCESSIBILITY_FOCUS in populateNodeForVirtualViewId()
+Callbacks must not add ACTION_CLEAR_ACCESSIBILITY_FOCUS in populateNodeForVirtualViewId()
+Drawing order is not available, was AccessibilityNodeInfo requested for a child node before its parent?
+HideFromAccessibility
+Invalid arguments for accessibility character locations
+Kotlin reflection is not yet supported for synthetic Java properties. Please follow/upvote https://youtrack.jetbrains.com/issue/KT-55980
+Landroid/accessibilityservice/AccessibilityServiceInfo;
+Landroid/provider/ContactsContract$CommonDataKinds$Email;
+Landroid/provider/ContactsContract$CommonDataKinds$Phone;
+Landroid/provider/ContactsContract$CommonDataKinds$StructuredPostal;
+Landroid/provider/ContactsContract$Contacts;
+Landroid/provider/ContactsContract$Data;
+Landroid/provider/ContactsContract$Groups;
+Landroid/provider/ContactsContract$RawContacts;
+Landroid/provider/ContactsContract$Settings;
+Landroid/view/View$AccessibilityDelegate;
+Landroid/view/accessibility/AccessibilityEvent;
+Landroid/view/accessibility/AccessibilityManager$AccessibilityStateChangeListener;
+Landroid/view/accessibility/AccessibilityManager$TouchExplorationStateChangeListener;
+Landroid/view/accessibility/AccessibilityManager;
+Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
+Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;
+Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;
+Landroid/view/accessibility/AccessibilityNodeInfo;
+Landroid/view/accessibility/AccessibilityNodeProvider;
+Landroid/view/accessibility/AccessibilityRecord;
+accessibility
+addAccessibilityStateChangeListener
+addExtraDataToAccessibilityNodeInfo
+android.view.accessibility.action.ARGUMENT_PROGRESS_VALUE
+android.view.accessibility.extra.DATA_TEXT_CHARACTER_LOCATION_ARG_LENGTH
+android.view.accessibility.extra.DATA_TEXT_CHARACTER_LOCATION_ARG_START_INDEX
+android.view.accessibility.extra.DATA_TEXT_CHARACTER_LOCATION_KEY
+android.view.accessibility.extra.EXTRA_DATA_TEST_TRAVERSALAFTER_VAL
+android.view.accessibility.extra.EXTRA_DATA_TEST_TRAVERSALBEFORE_VAL
+androidx.view.accessibility.AccessibilityNodeInfoCompat.BOOLEAN_PROPERTY_KEY
+androidx.view.accessibility.AccessibilityNodeInfoCompat.BOUNDS_IN_WINDOW_KEY
+androidx.view.accessibility.AccessibilityNodeInfoCompat.CHECKED_KEY
+androidx.view.accessibility.AccessibilityNodeInfoCompat.CONTAINER_TITLE_KEY
+androidx.view.accessibility.AccessibilityNodeInfoCompat.EXPANDED_STATE_KEY
+androidx.view.accessibility.AccessibilityNodeInfoCompat.IS_REQUIRED_KEY
+androidx.view.accessibility.AccessibilityNodeInfoCompat.PANE_TITLE_KEY
+androidx.view.accessibility.AccessibilityNodeInfoCompat.SPANS_ACTION_ID_KEY
+androidx.view.accessibility.AccessibilityNodeInfoCompat.SPANS_END_KEY
+androidx.view.accessibility.AccessibilityNodeInfoCompat.SPANS_FLAGS_KEY
+androidx.view.accessibility.AccessibilityNodeInfoCompat.SPANS_ID_KEY
+androidx.view.accessibility.AccessibilityNodeInfoCompat.SPANS_START_KEY
+androidx.view.accessibility.AccessibilityNodeInfoCompat.STATE_DESCRIPTION_KEY
+androidx.view.accessibility.AccessibilityNodeInfoCompat.SUPPLEMENTAL_DESCRIPTION_KEY
+androidx.view.accessibility.AccessibilityNodeInfoCompat.TOOLTIP_TEXT_KEY
+androidx.view.accessibility.AccessibilityNodeInfoCompat.UNIQUE_ID_KEY
+announceForAccessibility
+createAccessibilityNodeInfo
+dispatchPopulateAccessibilityEvent
+findAccessibilityNodeInfosByText
+findViewByAccessibilityIdTraversal
+getAccessibilityClassName
+getAccessibilityDelegate
+getAccessibilityLiveRegion
+getAccessibilityManager
+getAccessibilityNodeProvider
+getAccessibilityPaneTitle
+getAccessibilityViewId
+getCompatAccessibilityDelegate
+getEnabledAccessibilityServiceList
+getErrorAccessibilityLabel
+getErrorAccessibilityLiveRegion
+getImportantForAccessibility
+getParentForAccessibility
+http://ns.adobe.com/xap/1.0/\u0000
+http://schemas.android.com/apk/res-auto
+http://schemas.android.com/apk/res/android
+https://
+https://fossify.org/upgrade_to_pro
+https://github.com/FossifyOrg
+https://github.com/FossifyOrg/
+https://github.com/google/gson/blob/main/Troubleshooting.md#
+https://github.com/sponsors/FossifyOrg
+https://liberapay.com/naveensingh
+https://opencollective.com/fossify/donate?interval=month&amount=20
+https://paypal.me/naveen3singh
+https://play.google.com/store/apps/details?id=
+https://play.google.com/store/apps/dev?id=7297838378654322558
+https://t.me/Fossify
+https://www.fossify.org/policy/
+https://www.patreon.com/naveen3singh
+https://www.reddit.com/r/Fossify
+isAccessibilityDataSensitive
+isAccessibilityHeading
+isImportantForAccessibility
+isRequestFromAccessibilityTool
+loadLibrary
+mAccessibilityDelegate
+notifySubtreeAccessibilityStateChanged
+null cannot be cast to non-null type T of androidx.compose.ui.platform.AndroidComposeViewAccessibilityDelegateCompat.trimToSize
+null cannot be cast to non-null type android.view.accessibility.AccessibilityManager
+null cannot be cast to non-null type androidx.compose.ui.platform.AccessibilityIterators.CharacterTextSegmentIterator
+null cannot be cast to non-null type androidx.compose.ui.platform.AccessibilityIterators.LineTextSegmentIterator
+null cannot be cast to non-null type androidx.compose.ui.platform.AccessibilityIterators.PageTextSegmentIterator
+null cannot be cast to non-null type androidx.compose.ui.platform.AccessibilityIterators.ParagraphTextSegmentIterator
+null cannot be cast to non-null type androidx.compose.ui.platform.AccessibilityIterators.WordTextSegmentIterator
+null cannot be cast to non-null type androidx.compose.ui.semantics.AccessibilityAction<*>
+onAccessibilityStateChanged
+onInitializeAccessibilityEvent
+onInitializeAccessibilityNodeInfo
+onPopulateAccessibilityEvent
+onRequestSendAccessibilityEvent
+performAccessibilityAction
+removeAccessibilityStateChangeListener
+requestSendAccessibilityEvent
+sendAccessibilityEvent
+sendAccessibilityEventUnchecked
+sendAccessibilitySemanticsStructureChangeEvents
+setAccessibilityClassName
+setAccessibilityDataSensitive
+setAccessibilityDelegate
+setAccessibilityDelegateCompat
+setAccessibilityEventBatchIntervalMillis
+setAccessibilityFocused
+setAccessibilityHeading
+setAccessibilityLiveRegion
+setAccessibilityPaneTitle
+setComponentEnabledSetting
+setErrorAccessibilityLabel
+setErrorAccessibilityLabelResource
+setErrorAccessibilityLiveRegion
+setImportantForAccessibility
+setTextInputAccessibilityDelegate

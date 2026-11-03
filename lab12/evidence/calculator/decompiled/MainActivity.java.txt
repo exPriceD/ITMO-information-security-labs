@@ -1,0 +1,341 @@
+package org.fossify.math.activities;
+public final class MainActivity extends r5.f implements y5.a {
+    public static final synthetic int W;
+    public int R;
+    public boolean S;
+    public String T;
+    public G3.m U;
+    public final Object V;
+
+    public MainActivity()
+    {
+        this.S = 1;
+        this.T = "";
+        this.V = v4.a.Q(e4.e.j, new S.U(5, this));
+        return;
+    }
+
+    public final boolean K(boolean p3)
+    {
+        String v0_1;
+        String v0_2 = this.L().x;
+        String v1 = 0;
+        if (v0_2 == null) {
+            v0_1 = 0;
+        } else {
+            v0_1 = a.a.t(v0_2);
+        }
+        if (p3 != 0) {
+            int v3_2 = this.L().B;
+            if (v3_2 != 0) {
+                v1 = a.a.t(v3_2);
+            }
+            v0_1 = v1;
+        }
+        if ((v0_1 != null) && (v0_1.length() != 0)) {
+            com.bumptech.glide.f.p(this, v0_1);
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    public final v5.a L()
+    {
+        return ((v5.a) this.V.getValue());
+    }
+
+    public final void M(android.widget.TextView p3, String p4)
+    {
+        p3.setOnClickListener(new r5.c(0, new A5.a(19, this, p4), this));
+        return;
+    }
+
+    public final void a(android.content.Context p1, String p2)
+    {
+        t4.k.e("value", p2);
+        android.widget.TextView v1_2 = this.L().B;
+        if (v1_2 != null) {
+            v1_2.setText(p2);
+        }
+        return;
+    }
+
+    public final void e(android.content.Context p1, String p2)
+    {
+        t4.k.e("value", p2);
+        android.widget.TextView v1_2 = this.L().x;
+        if (v1_2 != null) {
+            v1_2.setText(p2);
+        }
+        return;
+    }
+
+    public final void onCreate(android.os.Bundle p21)
+    {
+        org.fossify.math.activities.MainActivity v1 = this;
+        super.onCreate(p21);
+        this.setContentView(this.L().a);
+        String v2_87 = com.bumptech.glide.f.A(this);
+        int v3_0 = l5.f.c(this);
+        t4.k.e("internalStoragePath", v3_0);
+        v2_87.b.edit().putString("internal_storage_path", v3_0).apply();
+        m5.d.a(new A4.j(19, this));
+        com.bumptech.glide.f.A(this).b.edit().putString("app_id", "org.fossify.math").apply();
+        if (com.bumptech.glide.f.A(this).e() != 0) {
+            if (!com.bumptech.glide.f.A(this).b.getBoolean("was_orange_icon_checked", 0)) {
+                com.bumptech.glide.f.A(this).b.edit().putBoolean("was_orange_icon_checked", 1).apply();
+                String v2_86 = this.getResources().getColor(2131099701);
+                if (com.bumptech.glide.f.A(this).c() != v2_86) {
+                    S.c v5_24 = g2.y.w(this);
+                    android.widget.TextView v9_4 = v5_24.size();
+                    android.widget.TextView v10_2 = 0;
+                    android.widget.TextView v11 = 0;
+                    while (v11 < v9_4) {
+                        android.widget.TextView v12_0 = v5_24.get(v11);
+                        v11++;
+                        android.widget.TextView v13 = (v10_2 + 1);
+                        if (v10_2 < null) {
+                            com.bumptech.glide.d.O();
+                            throw 0;
+                        } else {
+                            g2.y.Y(this, "org.fossify.math", v10_2, ((Number) v12_0).intValue(), 0);
+                            v10_2 = v13;
+                        }
+                    }
+                    this.getPackageManager().setComponentEnabledSetting(new android.content.ComponentName(com.bumptech.glide.f.A(this).d(), B4.e.U(com.bumptech.glide.f.A(this).d(), ".debug").concat(".activities.SplashActivity")), 0, 1);
+                    this.getPackageManager().setComponentEnabledSetting(new android.content.ComponentName(com.bumptech.glide.f.A(this).d(), B4.e.U(com.bumptech.glide.f.A(this).d(), ".debug").concat(".activities.SplashActivity.Green")), 1, 1);
+                    com.bumptech.glide.f.A(this).q(v2_86);
+                    C.a.p(com.bumptech.glide.f.A(this).b, "last_icon_color", v2_86);
+                }
+            }
+        } else {
+            com.bumptech.glide.f.A(this).b.edit().putBoolean("was_orange_icon_checked", 1).apply();
+            g2.y.o(this);
+        }
+        String v2_5 = com.bumptech.glide.f.A(this);
+        v2_5.b.edit().putInt("app_run_count", (v2_5.e() + 1)).apply();
+        if ((com.bumptech.glide.f.A(this).e() % 30) == 0) {
+            String v2_13 = this.getPackageName();
+            t4.k.d("getPackageName(...)", v2_13);
+            if (B4.l.D(v2_13, "org.fossify.", 0)) {
+                String v2_15 = this.getPackageName();
+                t4.k.d("getPackageName(...)", v2_15);
+                if (B4.l.z(B4.e.U(v2_15, ".debug"), ".pro", 0)) {
+                    this.L().A.setOnMenuItemClickListener(new H1.b(10, this));
+                    v1.L().A.getMenu().findItem(2131296786).setVisible((v1.getResources().getBoolean(2131034115) ^ 1));
+                    W4.r.A(this, 0, com.bumptech.glide.d.z(this.L().z), 29);
+                    this.B(this.L().z, v1.L().y);
+                    if (p21 != null) {
+                        k5.q v0_1 = p21.getCharSequence("calculatorState");
+                        t4.k.c("null cannot be cast to non-null type kotlin.String", v0_1);
+                        this.T = ((String) v0_1);
+                    }
+                    String v2_41 = this.getApplicationContext();
+                    t4.k.d("getApplicationContext(...)", v2_41);
+                    this.U = new G3.m(this, v2_41, v1.T);
+                    k5.q v0_6 = this.L().s;
+                    if (v0_6 != null) {
+                        this.M(v0_6, "plus");
+                    }
+                    k5.q v0_8 = this.L().p;
+                    if (v0_8 != null) {
+                        this.M(v0_8, "minus");
+                    }
+                    k5.q v0_10 = this.L().q;
+                    if (v0_10 != null) {
+                        this.M(v0_10, "multiply");
+                    }
+                    k5.q v0_12 = this.L().n;
+                    if (v0_12 != null) {
+                        this.M(v0_12, "divide");
+                    }
+                    k5.q v0_14 = this.L().r;
+                    if (v0_14 != null) {
+                        this.M(v0_14, "percent");
+                    }
+                    k5.q v0_16 = this.L().t;
+                    if (v0_16 != null) {
+                        this.M(v0_16, "power");
+                    }
+                    k5.q v0_18 = this.L().v;
+                    if (v0_18 != null) {
+                        this.M(v0_18, "root");
+                    }
+                    k5.q v0_20 = this.L().p;
+                    if (v0_20 != null) {
+                        v0_20.setOnLongClickListener(new r5.a(this, 0));
+                    }
+                    k5.q v0_22 = this.L().l;
+                    if (v0_22 != null) {
+                        v0_22.setOnClickListener(new r5.c(0, new r5.b(this, 1), this));
+                    }
+                    k5.q v0_24 = this.L().l;
+                    if (v0_24 != null) {
+                        v0_24.setOnLongClickListener(new r5.a(this, 1));
+                    }
+                    k5.q v0_25 = this.L();
+                    v11 = v0_25.c;
+                    v13 = v0_25.e;
+                    android.widget.TextView v15 = v0_25.g;
+                    android.widget.TextView v17 = v0_25.i;
+                    android.widget.TextView v18 = v0_25.j;
+                    k5.q v0_27 = new android.widget.TextView[] {v0_25.m, v0_25.k});
+                    String v2_60 = 0;
+                    while (v2_60 < 11) {
+                        int v3_23 = v0_27[v2_60];
+                        if (v3_23 != 0) {
+                            v3_23.setOnClickListener(new r5.c(0, new r5.b(this, 2), this));
+                        }
+                        v2_60++;
+                    }
+                    k5.q v0_29 = this.L().o;
+                    if (v0_29 != null) {
+                        v0_29.setOnClickListener(new r5.c(0, new r5.b(this, 3), this));
+                    }
+                    k5.q v0_31 = this.L().x;
+                    if (v0_31 != null) {
+                        v0_31.setOnLongClickListener(new r5.a(this, 2));
+                    }
+                    k5.q v0_33 = this.L().B;
+                    if (v0_33 != null) {
+                        v0_33.setOnLongClickListener(new r5.a(this, 3));
+                    }
+                    U4.c.b(this.L().B);
+                    U4.c.b(this.L().x);
+                    this.R = x5.a.t(this).o();
+                    k5.q v0_41 = this.L().w;
+                    if (v0_41 != null) {
+                        x5.a.L(this, v0_41, g2.y.B(this));
+                    }
+                    k5.q v0_43 = this.L().m;
+                    if (v0_43 != null) {
+                        v0_43.setText(String.valueOf(java.text.DecimalFormatSymbols.getInstance().getDecimalSeparator()));
+                    }
+                    try {
+                        if (!com.bumptech.glide.f.A(this).b.getBoolean("was_app_on_sd_shown", 0)) {
+                            k5.q v0_49 = this.getPackageManager().getPackageInfo(this.getPackageName(), 0).applicationInfo;
+                            if ((v0_49 != null) && ((v0_49.flags & 262144) == 262144)) {
+                                com.bumptech.glide.f.A(this).b.edit().putBoolean("was_app_on_sd_shown", 1).apply();
+                                new k5.q(this, "", 2131820622, 2131821360, new S.c(18), 96);
+                            }
+                        }
+                    } catch (Exception) {
+                    }
+                    return;
+                }
+            }
+            if (!this.getResources().getBoolean(2131034115)) {
+                if (!m5.d.c.contains(B4.e.T(B4.e.U(com.bumptech.glide.f.A(this).d(), ".debug")))) {
+                    if (!com.bumptech.glide.f.N(this, 1)) {
+                        new k5.u(this, 0);
+                    }
+                } else {
+                    new k5.u(this, 1);
+                }
+            }
+        }
+    }
+
+    public final void onDestroy()
+    {
+        super.onDestroy();
+        if (!this.isChangingConfigurations()) {
+            org.fossify.math.databases.CalculatorDatabase.k = 0;
+        }
+        return;
+    }
+
+    public final void onPause()
+    {
+        super.onPause();
+        this.R = x5.a.t(this).o();
+        if (x5.a.t(this).k()) {
+            this.getWindow().clearFlags(128);
+        }
+        return;
+    }
+
+    public final void onResume()
+    {
+        super.onResume();
+        int v2 = 0;
+        W4.g.I(this, this.L().y, 0, 14);
+        this.B(this.L().z, this.L().y);
+        if (this.R != x5.a.t(this).o()) {
+            android.widget.TextView[] v0_3 = this.L().w;
+            if (v0_3 != null) {
+                x5.a.L(this, v0_3, g2.y.B(this));
+            }
+        }
+        if (x5.a.t(this).k()) {
+            this.getWindow().addFlags(128);
+        }
+        android.widget.TextView[] v0_9 = this.L().m;
+        if (v0_9 != null) {
+            v0_9.setText(String.valueOf(java.text.DecimalFormatSymbols.getInstance().getDecimalSeparator()));
+        }
+        this.S = x5.a.t(this).p();
+        android.widget.TextView[] v0_12 = this.L();
+        android.content.res.Resources$Theme v5 = v0_12.v;
+        android.content.res.Resources$Theme v7 = v0_12.u;
+        android.widget.TextView v9 = v0_12.q;
+        android.widget.TextView v11 = v0_12.p;
+        android.graphics.drawable.Drawable v1_10 = new android.widget.TextView[] {v0_12.r, v0_12.m});
+        int v3_1 = 0;
+        while (v3_1 < 11) {
+            android.content.res.Resources$Theme v5_0 = v1_10[v3_1];
+            if (v5_0 != null) {
+                v5_0.setBackground(this.getResources().getDrawable(2131231190, this.getTheme()));
+            }
+            if (v5_0 != null) {
+                android.graphics.drawable.Drawable v4_1 = v5_0.getBackground();
+                if (v4_1 != null) {
+                    v4_1.setAlpha(90);
+                }
+            }
+            v3_1++;
+        }
+        v7 = v0_12.d;
+        v9 = v0_12.f;
+        v11 = v0_12.h;
+        android.widget.TextView v13 = v0_12.j;
+        android.widget.TextView[] v0_14 = new android.widget.TextView[] {v0_12.b, v0_12.k});
+        while (v2 < 10) {
+            android.graphics.drawable.Drawable v1_12 = v0_14[v2];
+            if (v1_12 != null) {
+                v1_12.setBackground(this.getResources().getDrawable(2131231190, this.getTheme()));
+            }
+            if (v1_12 != null) {
+                android.graphics.drawable.Drawable v1_13 = v1_12.getBackground();
+                if (v1_13 != null) {
+                    v1_13.setAlpha(30);
+                }
+            }
+            v2++;
+        }
+        return;
+    }
+
+    public final void onSaveInstanceState(android.os.Bundle p5)
+    {
+        t4.k.e("bundle", p5);
+        super.onSaveInstanceState(p5);
+        String v0_1 = this.U;
+        if (v0_1 == null) {
+            t4.k.j("calc");
+            throw 0;
+        } else {
+            String v1_0 = new org.json.JSONObject();
+            v1_0.put("res", ((String) v0_1.c));
+            v1_0.put("previousCalculation", ((String) v0_1.d));
+            v1_0.put("lastKey", ((String) v0_1.h));
+            v1_0.put("lastOperation", ((String) v0_1.i));
+            v1_0.put("baseValue", ((java.math.BigDecimal) v0_1.e).toString());
+            v1_0.put("secondValue", ((java.math.BigDecimal) v0_1.f).toString());
+            v1_0.put("inputDisplayedFormula", ((String) v0_1.g));
+            p5.putString("calculatorState", v1_0.toString());
+            return;
+        }
+    }
+}

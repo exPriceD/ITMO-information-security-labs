@@ -1,0 +1,116 @@
+{
+  "calculator": {
+    "filename": "calculator-8-foss-release.apk",
+    "source_url": "https://github.com/FossifyOrg/Calculator/releases/download/1.2.0/calculator-8-foss-release.apk",
+    "size": 6900687,
+    "sha256": "cbadb649a3622867a62cb7756968db1e67e4a9e20df20b4b2732c998549bcbb6",
+    "sha1": "cda22bf2bd55e1eea15d78385b123742c0d492c3",
+    "md5": "5123960a14edcc207d7aebd038f9d856",
+    "package": "org.fossify.math",
+    "version_name": "1.2.0",
+    "version_code": "8",
+    "min_sdk": "26",
+    "target_sdk": "36",
+    "label": "Calculator",
+    "permissions": [
+      "org.fossify.android.permission.WRITE_GLOBAL_SETTINGS"
+    ],
+    "activities": [
+      "org.fossify.math.activities.MainActivity",
+      "org.fossify.commons.activities.FAQActivity",
+      "org.fossify.math.activities.UnitConverterActivity",
+      "org.fossify.commons.activities.ManageBlockedNumbersActivity",
+      "org.fossify.math.activities.UnitConverterPickerActivity",
+      "org.fossify.commons.activities.ContributorsActivity",
+      "org.fossify.commons.activities.DonationActivity",
+      "org.fossify.math.activities.WidgetConfigureActivity",
+      "org.fossify.commons.activities.AppLockActivity",
+      "org.fossify.math.activities.SettingsActivity",
+      "org.fossify.commons.activities.LicenseActivity",
+      "org.fossify.commons.activities.AboutActivity",
+      "org.fossify.commons.activities.CustomizationActivity",
+      "org.fossify.math.activities.SplashActivity"
+    ],
+    "services": [
+      "androidx.room.MultiInstanceInvalidationService"
+    ],
+    "receivers": [
+      "org.fossify.math.helpers.MyWidgetProvider",
+      "org.fossify.commons.receivers.FossifyBroadcastReceiver",
+      "androidx.profileinstaller.ProfileInstallReceiver",
+      "org.fossify.math.receivers.LocaleChangeReceiver"
+    ],
+    "providers": [
+      "androidx.startup.InitializationProvider"
+    ],
+    "main_activity": "org.fossify.math.activities.SplashActivity.Green",
+    "dex_files": [
+      "classes.dex"
+    ],
+    "native_libraries": [
+      "lib/arm64-v8a/libandroidx.graphics.path.so",
+      "lib/armeabi-v7a/libandroidx.graphics.path.so",
+      "lib/x86/libandroidx.graphics.path.so",
+      "lib/x86_64/libandroidx.graphics.path.so"
+    ]
+  },
+  "suspect": {
+    "filename": "FakeBank.B.apk",
+    "source_url": "https://raw.githubusercontent.com/ashishb/android-malware/master/BreakBottleneck/SamplesOfHIP2014TalkBreakBottleneck/FakeBank.B/FakeBank.B.apk",
+    "size": 229818,
+    "sha256": "f62815bf74f5782056c0f5e2e5c410cd272707cc86f76ee499774e7a634095d4",
+    "sha1": "a75e011326a862298ca34943a47d597dbba8195a",
+    "md5": "264de68937b7ccd7db8eeaadc23f6433",
+    "package": "com.google.bps.bfcfc",
+    "version_name": "1.1",
+    "version_code": "2",
+    "min_sdk": "8",
+    "target_sdk": "14",
+    "label": "Google App Store",
+    "permissions": [
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.READ_PHONE_STATE",
+      "android.permission.MODIFY_PHONE_STATE",
+      "android.permission.RESTART_PACKAGES",
+      "android.permission.VIBRATE",
+      "android.permission.GET_TASKS",
+      "android.permission.KILL_BACKGROUND_PROCESSES",
+      "android.permission.MODIFY_AUDIO_SETTINGS",
+      "android.permission.SYSTEM_ALERT_WINDOW",
+      "android.permission.CHANGE_WIFI_STATE",
+      "android.permission.WRITE_CONTACTS",
+      "android.permission.INTERNET",
+      "android.permission.WAKE_LOCK",
+      "android.permission.SEND_SMS",
+      "android.permission.READ_LOGS",
+      "android.permission.ACCESS_WIFI_STATE",
+      "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+      "android.permission.CALL_PHONE",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "com.android.launcher.permission.INSTALL_SHORTCUT",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.READ_CONTACTS",
+      "android.permission.RECEIVE_SMS"
+    ],
+    "activities": [
+      "com.google.bps.bfcfc.MainActivity"
+    ],
+    "services": [
+      "com.google.bps.bfcfc.CoreService"
+    ],
+    "receivers": [
+      "com.google.bps.bfcfc.PhoneListener",
+      "com.google.bps.bfcfc.LockReceiver",
+      "com.google.bps.bfcfc.SMSReceiver",
+      "com.google.bps.bfcfc.BootBroadcastReceiver"
+    ],
+    "providers": [],
+    "main_activity": "com.google.bps.bfcfc.MainActivity",
+    "dex_files": [
+      "classes.dex"
+    ],
+    "native_libraries": [
+      "lib/armeabi/libAPKProtect.so"
+    ]
+  }
+}
